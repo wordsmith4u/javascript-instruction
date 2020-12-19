@@ -13,16 +13,19 @@
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
   ];
 
+  function addTdToRow(row, tdText) {
+     let td = document.createElement("td");
+     td.innerText = tdText;
+     row.appendChild(td);
+  }
+
  let table = document.createElement("table");
  for (let mtn of MOUNTAINS) {
      let row = document.createElement("tr");
-     let nameTd = document.createElement("td");
-     let nameTdText = document.createTextNode(mtn.name);
-     //let nameTdText = document.createTextNode(mtn.height);
-
-     nameTd.appendChild(nameTdText);
-     row.appendChild(nameTd);
-
+     addTdToRow(row, mtn.name);
+     addTdToRow(row, mtn.height);
+     addTdToRow(row, mtn.place);
+     
      table.appendChild(row);
  }
  document.getElementById("mountains").appendChild(table);
