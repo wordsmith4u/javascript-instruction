@@ -1,20 +1,22 @@
-function countBs(s) {
-    var count = 0; 
-    for (var i = 0; i < s.length; i += 1) {
-      if (s.charAt(i) === "B")
-        count += 1;
+function countBs(str) {
+    let total = 0; 
+    for (let i = 0; i < str.length; ++i) {
+      if (str[i] == "B")
+        total ++;
+      }
     }
-    return count;
-  }
+    return total;
+ 
   
-  function countChar(s, c) {
-    var count = 0; 
-    for (var i = 0; i < s.length; i += 1) {
-      if (s.charAt(i) === c)
-        count += 1;
+  function countChar(str, char) {
+    let total = 0; 
+    for (let i = 0; i < str.length; ++i) {
+      if (str[i] == char)
+        total ++;
     }
-    return count;
   }
+    return total;
+ 
   
   console.log(countBs("BBC"));
   // → 2
